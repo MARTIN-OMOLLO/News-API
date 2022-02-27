@@ -1,7 +1,14 @@
 from app import app
+import urllib.request,json
+from .models import news
 
-# Getting api key
+Movie = movie.Movie
+
+ Getting api key
 api_key = app.config['NEWS_API_KEY']
+
+# Getting the movie base url
+base_url = app.config["NEWS_API_BASE_URL"]
 
 
 def get_news(category):
@@ -45,6 +52,6 @@ def process_results(news_list):
 
         if poster:
             news_object = news(id,title,overview,poster,vote_average,vote_count)
-            news_results.append(movie_object)
+            news_results.append(news_object)
 
     return news_results
