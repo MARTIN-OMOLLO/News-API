@@ -44,14 +44,13 @@ def process_results(news_list):
     news_results = []
     for news_item in news_list:
         id = news_item.get('id')
-        title = news_item.get('original_title')
-        overview = news_item.get('overview')
-        poster = news_item.get('poster_path')
-        vote_average = news_item.get('vote_average')
-        vote_count = news_item.get('vote_count')
+        name = news_item.get('name')
+        author  = news_item.get('author')
+        description = news_item.get('description')
+    
 
-        if poster:
-            news_object = news(id,title,overview,poster,vote_average,vote_count)
+        if description:
+            news_object = news(id,name,author,description)
             news_results.append(news_object)
 
     return news_results
