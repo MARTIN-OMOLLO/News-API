@@ -13,9 +13,7 @@ def index():
     '''
 
     # Getting popular news
-    popular_news = get_news('popular')
-    upcoming_news = get_news('upcoming')
-    now_showing_news = get_news('now_playing')
+    popular_news = get_news()
     title = 'Home - Welcome to The best news Review Website Online'
-    return render_template('index.html', title = title, popular = popular_news, upcoming = upcoming_news, now_showing = now_showing_news )
+    return render_template('index.html', title = title, popular = popular_news)
     
