@@ -4,7 +4,7 @@ from .models import news
 
 News = news.News
 
- Getting api key
+#  Getting api_key
 api_key = app.config['NEWS_API_KEY']
 
 # Getting the movie base url
