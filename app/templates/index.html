@@ -4,12 +4,12 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="{{url_for('static', filename='css/main.css')}}">
     <title>NEWS WEB APPLICATION</title>
 </head>
 <body>
-    <div class="Body">
-<body>
+    <div class="body">
+
         <!-- Popular movie section  -->
         <h3> WORLD NEWS</h3>
          <ul>
@@ -19,7 +19,7 @@
                 <li><a href="{{popular_news.url}}">{{popular_news.url}}</a></li>
             {% endfor %}
         </ul>
- </body>
+
  ....
  </div>
 </body>
